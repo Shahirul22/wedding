@@ -26,6 +26,6 @@ setInterval(updateCountdown, 1000);
 updateCountdown(); 
 
 // Particles.js initialization
-particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
+particlesJS.load('particles-js', 'assets/particlesjs-config.json?v=1.0', function() {
   console.log('callback - particles.js config loaded');
 }); 
