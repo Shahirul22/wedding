@@ -29,3 +29,25 @@ updateCountdown();
 particlesJS.load('particles-js', 'assets/particlesjs-config.json?v=1.0', function() {
   console.log('callback - particles.js config loaded');
 }); 
+
+// Background Audio Player
+document.addEventListener('DOMContentLoaded', function() {
+    const backgroundSong = document.getElementById('background-song');
+    const playPauseBtn = document.getElementById('play-pause-btn');
+    const playIcon = '<i class="fas fa-play"></i>';
+    const pauseIcon = '<i class="fas fa-pause"></i>';
+
+    if (backgroundSong && playPauseBtn) {
+        backgroundSong.volume = 0.5;
+
+        playPauseBtn.addEventListener('click', function() {
+            if (backgroundSong.paused) {
+                backgroundSong.play();
+                playPauseBtn.innerHTML = pauseIcon;
+            } else {
+                backgroundSong.pause();
+                playPauseBtn.innerHTML = playIcon;
+            }
+        });
+    }
+}); 
